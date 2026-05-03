@@ -1,13 +1,13 @@
 class Llamavm < Formula
   desc "Version manager for llama.cpp on Apple Silicon"
   homepage "https://github.com/gregmundy/llamavm"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/gregmundy/llamavm/releases/download/v#{version}/llamavm_#{version}_darwin_arm64.tar.gz"
-      sha256 "0983b187de7cea77b32bc9fe5fd1f0219dad234baa490df7989cd9f6778bb564"
+      sha256 "140826cfc43d119a734898d798a1b48d620084e68f1fd3b6217e6e2b0fb777d2"
     end
   end
 
