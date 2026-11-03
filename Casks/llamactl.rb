@@ -23,9 +23,9 @@ cask "llamactl" do
   fish_completion "completions/llamactl.fish"
   zsh_completion "completions/_llamactl"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", staged_path]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}"]
     end
   end
 
